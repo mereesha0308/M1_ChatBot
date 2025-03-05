@@ -19,9 +19,8 @@ df = load_data()
 import openai
 import os
 
-# Set your API key securely
-openai.api_key = "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"
- # Replace with your actual key
+# Set your API key securely from Streamlit secrets
+openai.api_key = st.secrets["openai"]["api_key"] # Replace with your actual key
 # Alternatively, you can use an environment variable:
 # os.environ["OPENAI_API_KEY"] = "your-api-key"
 # Then use: openai.api_key = os.getenv("OPENAI_API_KEY")
