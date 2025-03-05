@@ -19,7 +19,7 @@ df = load_data()
 
 # Set your Groq API endpoint and API key securely
 groq_api_url = "https://api.groq.com/openai/v1/chat/completions"  # Correct endpoint
-groq_api_key = "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"   # Make sure to securely fetch the API key from environment variables
+groq_api_key = st.secrets["groq"]["api_key"]  # Make sure to securely fetch the API key from environment variables
 
 def query_groq_llama(prompt):
     """
